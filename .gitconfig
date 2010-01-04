@@ -1,0 +1,13 @@
+[github]
+	user = dschobel
+	#token
+[user]
+	name = dschobel
+	email = dschobel@gmail.com
+[alias]
+	ci = commit
+	co = checkout
+	br = branch
+	prune-all = !git remote | xargs -n 1 git remote prune
+	st = status
+	whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"

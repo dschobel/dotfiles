@@ -1,6 +1,6 @@
 [github]
 	user = dschobel
-	#token
+    #token 
 [user]
 	name = dschobel
 	email = dschobel@gmail.com
@@ -11,3 +11,14 @@
 	prune-all = !git remote | xargs -n 1 git remote prune
 	st = status
 	whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
+	unstage = reset HEAD --
+	last = log -1 HEAD
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[merge]
+	tool = opendiff
+[core]
+	editor = vim

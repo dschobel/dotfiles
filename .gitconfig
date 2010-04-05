@@ -1,6 +1,6 @@
 [github]
 	user = dschobel
-    #token 
+	token = 
 [user]
 	name = dschobel
 	email = dschobel@gmail.com
@@ -22,3 +22,5 @@
 	tool = opendiff
 [core]
 	editor = vim
+[help]
+	format = web

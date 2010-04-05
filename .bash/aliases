@@ -4,5 +4,6 @@ alias nginx_restart='nginx_stop; nginx_start'
 alias nginx_start='/opt/nginx/sbin/nginx'
 alias nginx_stop='kill `cat /opt/nginx/logs/nginx.pid `'
 alias git=hub
+alias g=git
 alias gm=growlme
 alias gitka='gitk --all'

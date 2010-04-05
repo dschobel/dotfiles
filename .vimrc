@@ -15,7 +15,7 @@ set smartcase
  set expandtab
 
 " Colors
-set background=dark
+"set background=dark
 syntax on " syntax highlighting
 
 " Mappings
@@ -23,3 +23,6 @@ imap jj <Esc>
 
 "File Stuff
 filetype plugin indent on
+
+"ragtag mappings
+let g:ragtag_global_maps = 1 

@@ -26,3 +26,9 @@ filetype plugin indent on
 
 "ragtag mappings
 let g:ragtag_global_maps = 1 
+
+
+"scala support
+~/.vim/ftdetect/scala.vim 
+~/.vim/indent/scala.vim  
+~/.vim/syntax/scala.vim

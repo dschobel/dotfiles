@@ -6,16 +6,17 @@ set ignorecase
 set smartcase
 
 " Tabs
- set autoindent
- set smarttab
- set smartindent
- set tabstop=4
- set softtabstop=4
- set shiftwidth=4
- set expandtab
+set autoindent
+set smarttab
+set smartindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
 
 " Colors
-"set background=dark
+set background=dark
+colorscheme inkpot
 syntax on " syntax highlighting
 
 " Mappings
@@ -25,10 +26,10 @@ imap jj <Esc>
 filetype plugin indent on
 
 "ragtag mappings
-let g:ragtag_global_maps = 1 
+"let g:ragtag_global_maps = 1 
 
 
 "scala support
-~/.vim/ftdetect/scala.vim 
-~/.vim/indent/scala.vim  
-~/.vim/syntax/scala.vim
+"~/.vim/ftdetect/scala.vim 
+"~/.vim/indent/scala.vim  
+"~/.vim/syntax/scala.vim

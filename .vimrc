@@ -5,6 +5,9 @@ set incsearch
 set ignorecase
 set smartcase
 
+" disable Ex mode
+ map Q <Nop>
+
 " Tabs
 set autoindent
 set smarttab

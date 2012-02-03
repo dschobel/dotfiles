@@ -25,6 +25,14 @@ syntax on " syntax highlighting
 " Mappings
 imap jj <Esc>
 
+" Moving between buffers
+map <C-Tab> :bnext<cr>
+map <C-S-Tab> :bprevious<cr>
+map <C-k> <C-w><Up>
+map <C-j> <C-w><Down>
+map <C-l> <C-w><Right>
+map <C-h> <C-w><Left>
+
 "File Stuff
 filetype plugin indent on
 

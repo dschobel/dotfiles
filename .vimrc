@@ -1,9 +1,25 @@
-" Fundamentals
+" config for Vundle
 set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'Lokaltog/vim-easymotion'
+"Bundle 'Lokaltog/vim-powerline'
+
+set nocompatible   " Disable vi-compatibility 
+set laststatus=2   " Always show the statusline 
+set encoding=utf-8 " Necessary to show unicode glyphs 
+
+" Fundamentals
+filetype plugin indent on 
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
 
 " disable Ex mode
  map Q <Nop>
@@ -33,14 +49,7 @@ map <C-j> <C-w><Down>
 map <C-l> <C-w><Right>
 map <C-h> <C-w><Left>
 
-"File Stuff
-filetype plugin indent on
-
-"ragtag mappings
-"let g:ragtag_global_maps = 1 
-
-" Motion for "next/last object". For example, "din(" would go to the next "()" pair
-" and delete its contents.
+" Motion for "next/last object". For example, "din(" would go to the next "()" pair and delete its contents.
 
 onoremap an :<c-u>call <SID>NextTextObject('a', 'f')<cr>
 xnoremap an :<c-u>call <SID>NextTextObject('a', 'f')<cr>
@@ -65,9 +74,3 @@ function! s:NextTextObject(motion, dir)
 
   exe "normal! ".a:dir.c."v".a:motion.c
 endfunction
-
-
-"scala support
-"~/.vim/ftdetect/scala.vim 
-"~/.vim/indent/scala.vim  
-"~/.vim/syntax/scala.vim

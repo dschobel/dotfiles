@@ -7,7 +7,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-easymotion'
-"Bundle 'Lokaltog/vim-powerline'
+Bundle 'Lokaltog/vim-powerline'
 
 set nocompatible   " Disable vi-compatibility 
 set laststatus=2   " Always show the statusline 

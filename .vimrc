@@ -8,10 +8,13 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
 
 set nocompatible   " Disable vi-compatibility 
 set laststatus=2   " Always show the statusline 
 set encoding=utf-8 " Necessary to show unicode glyphs 
+set rnu
 
 " Fundamentals
 filetype plugin indent on 
@@ -21,7 +24,11 @@ set ignorecase
 set smartcase
 
 
-" disable Ex mode
+" binding for Ctrl-P
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_working_path_mode = 2 " WD is the nearest ancestor that contains one of these directories or files: .git/ .hg/ .svn/ .bzr/ _darcs/
+
+" " disable Ex mode
  map Q <Nop>
 
 " Tabs

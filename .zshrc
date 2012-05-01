@@ -31,12 +31,13 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github osx rvm terminalapp)
+plugins=(git github osx rvm terminalapp lein)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 #export PATH=/Users/daniel/code/scala/scala-2.8.2.final/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:~/bin:/opt/ruby/1.8/bin:/opt/nginx/sbin/:/opt/mysql/bin:/usr/local/sbin:/Users/daniel/.rvm/gems/ruby-1.9.3-p0/bin:/Users/daniel/.rvm/gems/ruby-1.9.3-p0@global/bin:/Users/daniel/.rvm/rubies/ruby-1.9.3-p0/bin:/Users/daniel/.rvm/bin
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:~/bin:/opt/ruby/1.8/bin:/opt/nginx/sbin/:/opt/mysql/bin:/usr/local/sbin:/Users/daniel/.rvm/gems/ruby-1.9.3-p0/bin:/Users/daniel/.rvm/gems/ruby-1.9.3-p0@global/bin:/Users/daniel/.rvm/rubies/ruby-1.9.3-p0/bin:/Users/daniel/.rvm/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/bin:/opt/ruby/1.8/bin:/opt/nginx/sbin/:/opt/mysql/bin:/usr/local/sbin:/Users/daniel/.rvm/gems/ruby-1.9.3-p0/bin:/Users/daniel/.rvm/gems/ruby-1.9.3-p0@global/bin:/Users/daniel/.rvm/rubies/ruby-1.9.3-p0/bin:/Users/daniel/.rvm/bin
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function

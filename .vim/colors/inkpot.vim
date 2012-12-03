@@ -140,6 +140,10 @@ if has("gui_running")
 
         hi MatchParen   gui=NONE      guifg=#cfbfad   guibg=#4e4e8f
     endif
+    if v:version >= 703
+        hi Conceal      gui=NONE      guifg=#c080d0   guibg=NONE
+        hi ColorColumn  gui=NONE                      guibg=#2e2e2e
+    endif
 else
     if ! g:inkpot_black_background
         exec "hi Normal         cterm=NONE   ctermfg=" . <SID>X(79) . " ctermbg=" . <SID>X(80)
@@ -210,6 +214,10 @@ else
         exec "hi SpellLocal     cterm=NONE ctermbg=" . <SID>X(36)
         exec "hi SpellCap       cterm=NONE ctermbg=" . <SID>X(21)
         exec "hi MatchParen     cterm=NONE ctermbg=" . <SID>X(14) . "ctermfg=" . <SID>X(25)
+    endif
+    if v:version >= 703
+        exec "hi Conceal      cterm=NONE      ctermfg=" . <SID>X(55) . " ctermbg=" . "NONE"
+        exec "hi ColorColumn  cterm=NONE      ctermbg=" . <SID>X(81)
     endif
 endif
 

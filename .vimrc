@@ -1,3 +1,8 @@
+"let mapleader = ','
+let g:slimv_swank_clojure = '!xterm -e lein swank &'
+let g:lisp_rainbow=1
+let g:slimv_reply_syntax=1
+
 " config for Vundle
 set nocompatible
 filetype off
@@ -6,27 +11,45 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'Lokaltog/vim-easymotion'
+
+"Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'ervandew/supertab'
+Bundle 'vim-ruby/vim-ruby'
+"Bundle 'jpalardy/vim-slime'
+"Bundle 'vim-scripts/VimClojure'
+Bundle 'vim-scripts/slimv.vim'
 
 set nocompatible   " Disable vi-compatibility 
 set laststatus=2   " Always show the statusline 
 set encoding=utf-8 " Necessary to show unicode glyphs 
-set rnu
+set rnu            " Set relative line numberings
 
 " Fundamentals
 filetype plugin indent on 
+set hidden
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+set switchbuf=usetab,newtab
 
 
 " binding for Ctrl-P
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_working_path_mode = 2 " WD is the nearest ancestor that contains one of these directories or files: .git/ .hg/ .svn/ .bzr/ _darcs/
+
+" Map ctrl-movement keys to window switching
+map <C-k> <C-w><Up>
+map <C-j> <C-w><Down>
+map <C-l> <C-w><Right>
+map <C-h> <C-w><Left>
+
+" Switch to alternate buffers
+"map <S-J> :bnext<cr>
+map <S-K> :bprevious<cr>
 
 " " disable Ex mode
  map Q <Nop>
@@ -45,8 +68,18 @@ set background=dark
 colorscheme inkpot
 syntax on " syntax highlighting
 
-" Mappings
+" Insert mode Mappings
 imap jj <Esc>
+imap <S-Space> <Esc>
+"
+" Settings for VimClojure
+let vimclojure#HighlightBuiltins=1      " Highlight Clojure's builtins
+let vimclojure#ParenRainbow=1           " Rainbow parentheses'!
+let g:slime_target = "tmux"
+
+
+"set autocomplete to be approx. zsh-like
+set wildmode=longest,list:longest
 
 " Moving between buffers
 map <C-Tab> :bnext<cr>
@@ -81,3 +114,6 @@ function! s:NextTextObject(motion, dir)
 
   exe "normal! ".a:dir.c."v".a:motion.c
 endfunction
+
+
+autocmd BufRead *_spec.rb syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subject its shared_examples_for shared_context let highlight def link rubyRspec Function

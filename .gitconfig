@@ -2,7 +2,7 @@
 	user = dschobel
 	token = 
 [user]
-	name = dschobel
+	name = Daniel Schobel
 	email = dschobel@gmail.com
 [alias]
 	ci = commit
@@ -21,6 +21,9 @@
 [merge]
 	tool = opendiff
 [core]
+	excludesfile = /Users/daniel/.global_ignore
 	editor = vim
 [help]
 	format = web
+[credential]
+	helper = osxkeychain

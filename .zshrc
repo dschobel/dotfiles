@@ -5,8 +5,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="af-magic"
+ZSH_THEME="robbyrussell"
+#ZSH_THEME="random"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -41,10 +41,13 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 #export PATH=/Users/daniel/code/scala/scala-2.8.2.final/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:~/bin:/opt/ruby/1.8/bin:/opt/nginx/sbin/:/opt/mysql/bin:/usr/local/sbin:/Users/daniel/.rvm/gems/ruby-1.9.3-p0/bin:/Users/daniel/.rvm/gems/ruby-1.9.3-p0@global/bin:/Users/daniel/.rvm/rubies/ruby-1.9.3-p0/bin:/Users/daniel/.rvm/bin
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/bin:/opt/ruby/1.8/bin:/opt/nginx/sbin:/opt/mysql/bin:/usr/local/sbin:/Users/daniel/.rvm/gems/ruby-1.9.3-p0/bin:/Users/daniel/.rvm/gems/ruby-1.9.3-p0@global/bin:/Users/daniel/.rvm/rubies/ruby-1.9.3-p0/bin:/Users/daniel/.rvm/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/bin:/opt/ruby/1.8/bin:/opt/nginx/sbin:/opt/mysql/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/Cellar/ruby/1.9.3-p362/bin
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+export RLWRAP_HOME="$HOME/.rlwrap"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+### Add sml to path
+export PATH="/usr/local/Cellar/smlnj/110.75/libexec/bin:$PATH"

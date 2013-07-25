@@ -1,7 +1,7 @@
-"let mapleader = ','
-let g:slimv_swank_clojure = '!xterm -e lein swank &'
+let mapleader = ','
+"let g:slimv_swank_clojure = '!xterm -e lein swank &'
 let g:lisp_rainbow=1
-let g:slimv_reply_syntax=1
+"let g:slimv_reply_syntax=1
 
 " config for Vundle
 set nocompatible
@@ -18,9 +18,13 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/supertab'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'majutsushi/tagbar'
+Bundle 'epeli/slimux'
+"Bundle 'benmills/vimux'
 "Bundle 'jpalardy/vim-slime'
 "Bundle 'vim-scripts/VimClojure'
-Bundle 'vim-scripts/slimv.vim'
+"Bundle 'tpope/vim-foreplay'
+"Bundle 'vim-scripts/slimv.vim'
 
 set nocompatible   " Disable vi-compatibility 
 set laststatus=2   " Always show the statusline 
@@ -33,9 +37,9 @@ set hidden
 set hlsearch
 set incsearch
 set ignorecase
-set smartcase
+set smartcase 
 set switchbuf=usetab,newtab
-
+"  set timeoutlen=500 " minimize delay after O
 
 " binding for Ctrl-P
 let g:ctrlp_map = '<c-p>'
@@ -48,11 +52,10 @@ map <C-l> <C-w><Right>
 map <C-h> <C-w><Left>
 
 " Switch to alternate buffers
-"map <S-J> :bnext<cr>
-map <S-K> :bprevious<cr>
+map <S-K> :bnext<cr>
 
 " " disable Ex mode
- map Q <Nop>
+map Q <Nop>
 
 " Tabs
 set autoindent
@@ -70,12 +73,11 @@ syntax on " syntax highlighting
 
 " Insert mode Mappings
 imap jj <Esc>
-imap <S-Space> <Esc>
 "
 " Settings for VimClojure
-let vimclojure#HighlightBuiltins=1      " Highlight Clojure's builtins
-let vimclojure#ParenRainbow=1           " Rainbow parentheses'!
-let g:slime_target = "tmux"
+" let vimclojure#HighlightBuiltins=1      " Highlight Clojure's builtins
+" let vimclojure#ParenRainbow=1           " Rainbow parentheses'!
+" let g:slime_target = "tmux"
 
 
 "set autocomplete to be approx. zsh-like
@@ -84,6 +86,11 @@ set wildmode=longest,list:longest
 " Moving between buffers
 map <C-Tab> :bnext<cr>
 map <C-S-Tab> :bprevious<cr>
+
+map <Leader>l :SlimuxREPLSendLine<cr>
+map <Leader>s :SlimuxREPLSendSelection<cr>
+
+" Move between windows
 map <C-k> <C-w><Up>
 map <C-j> <C-w><Down>
 map <C-l> <C-w><Right>

@@ -1,6 +1,6 @@
 [github]
 	user = dschobel
-	token = 
+	token = SECRET_TOKEN
 [user]
 	name = Daniel Schobel
 	email = dschobel@gmail.com
@@ -27,3 +27,9 @@
 	format = web
 [credential]
 	helper = osxkeychain
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

@@ -1,1 +1,0 @@
-export PATH="~/bin:/opt/ruby/1.8/bin:/opt/nginx/sbin/:/opt/mysql/bin:/usr/local/bin:/usr/local/sbin:$PATH"
